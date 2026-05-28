@@ -11,13 +11,13 @@ def enter_language():
 
 @pytest.fixture()
 def browser():
-    domainLanguage = enter_language()
-    if domainLanguage == "":
-        domainLanguage = 'en'
-        
+    #domainLanguage = enter_language()
+    #if domainLanguage == "":
+    #    domainLanguage = 'en'
+    
+    #link = f"http://selenium1py.pythonanywhere.com/{domainLanguage}/"
     browser = webdriver.Chrome()
-    link = f"http://selenium1py.pythonanywhere.com/{domainLanguage}/"
-    browser.get(link)
+    #browser.get(link)
 
     yield browser
     browser.quit()
